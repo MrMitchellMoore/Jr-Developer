@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-let { CronJob } = require('cron');
+const { CronJob } = require('cron');
 
 CronJob = new CronJob(
   '* * * * * *',

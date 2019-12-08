@@ -1,7 +1,6 @@
-// eslint-disable-next-line no-unused-vars
-let { CronJob } = require('cron');
+const { CronJob } = require('cron').CronJob;
 
-CronJob = new CronJob(
+new CronJob(
   '* * * * * *',
   function() {
     console.log('You will see this message every second');
