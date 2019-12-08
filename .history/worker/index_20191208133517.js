@@ -3,8 +3,10 @@ let { CronJob } = require('cron');
 const fetchGitHub = require('./tasks/fetch-github');
 
 CronJob = new CronJob(
-  '* * * * * ',
-  fetchGitHub,
+  '*/1 * * * * *',
+  function() {
+    console.log('You will see this message every second');
+  },
   null,
   true,
   'America/Los_Angeles'

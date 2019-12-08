@@ -1,13 +1,7 @@
-/* eslint-disable no-unused-vars */
 const fetch = require('node-fetch');
 
-const redis = require('redis');
-
-const client = redis.createClient();
-
-const { promisify } = require('util');
-
-const getAsync = promisify(client.get).bind(client);
+let redis = require('redis');
+    var client = redis.createClient();
 
 const baseURL = `https://jobs.github.com/positions.json`;
 

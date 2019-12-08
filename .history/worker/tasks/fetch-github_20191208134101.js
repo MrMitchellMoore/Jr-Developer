@@ -1,13 +1,4 @@
-/* eslint-disable no-unused-vars */
 const fetch = require('node-fetch');
-
-const redis = require('redis');
-
-const client = redis.createClient();
-
-const { promisify } = require('util');
-
-const getAsync = promisify(client.get).bind(client);
 
 const baseURL = `https://jobs.github.com/positions.json`;
 
@@ -22,10 +13,8 @@ async function fetchGitHub() {
     resultCount = jobs.length;
     console.log('got', resultCount, 'jobs');
     onPage += 1;
+    console.log('got a total of', allJobs.length, 'jobs');
   }
-  console.log('***************************************');
-  console.log('got a total of', allJobs.length, 'jobs');
-  console.log('***************************************');
 }
 
 fetchGitHub();
