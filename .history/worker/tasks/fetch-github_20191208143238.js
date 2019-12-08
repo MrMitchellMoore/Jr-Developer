@@ -4,9 +4,9 @@
 const fetch = require('node-fetch');
 // node redis import
 const redis = require('redis');
-// client creation from redis
+// client 
 const client = redis.createClient();
-// Utility for Promises working with redis
+
 const { promisify } = require('util');
 
 // const getAsync = promisify(client.get).bind(client);
