@@ -1,5 +1,4 @@
-const { CronJob } = require('cron');
-
+const {CronJob} = require('cron');
 CronJob(
   '* * * * * *',
   function() {

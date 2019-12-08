@@ -16,23 +16,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "parser": "babel-eslint",
     "extends": [
       "react-app",
-      "wesbos",
-      "airbnb",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "trailingComma": "es5",
-          "singleQuote": true,
-          "printWidth": 80
-        }
-      ]
-    }
+      "wesbos"
+    ]
   },
   "browserslist": {
     "production": [

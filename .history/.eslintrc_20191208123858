@@ -1,0 +1,9 @@
+{
+    "extends": [
+        "wesbos",
+        "airb"
+    ],
+    "rules": {
+        "prettier/prettier"
+    }
+}

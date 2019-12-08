@@ -1,6 +1,4 @@
-const { CronJob } = require('cron');
-
-CronJob(
+const {CronJob} = require('cron');CronJob(
   '* * * * * *',
   function() {
     console.log('You will see this message every second');

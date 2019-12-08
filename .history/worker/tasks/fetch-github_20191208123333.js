@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 
 const baseURL = `https://jobs.github.com/positions.json?description=python&location=new+york`;
 
-async function fetchGitHub() {
+async function fetchGithub() {
   const resultCount = 1;
   while (resultCount > 0) {
     const res = await fetch(baseURL);
