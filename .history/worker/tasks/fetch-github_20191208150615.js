@@ -29,9 +29,7 @@ async function fetchGitHub() {
     onPage += 1;
   }
 
-  console.log('***************************************');
-  console.log('got a total of', allJobs.length, 'jobs');
-  console.log('***************************************');
+  
 
   // filter algorithm
   const jrJobs = allJobs.filter(job => {
@@ -51,7 +49,7 @@ async function fetchGitHub() {
   console.log('filtered down to', jrJobs.length);
 
   // set in redis
-  const success = await setAsync('github', JSON.stringify(jrJobs));
+  const success = await setAsync('github', JSON.stringify(allJobs));
   console.log(success);
 }
 

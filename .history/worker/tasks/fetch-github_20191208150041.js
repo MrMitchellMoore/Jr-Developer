@@ -29,29 +29,23 @@ async function fetchGitHub() {
     onPage += 1;
   }
 
+  // filter algo
+  const jrJobs = allJobs.filter(job => {
+    const jobTitle = job.title.toLowerCase();
+    let isJunior = true;
+    if(jobTitle.includes('senior') || 
+    jobTitle.includes('manager') ||
+    jobTitle.includes('sr')
+        )
+    return isJunior;
+  });
+
+  // set in redis
   console.log('***************************************');
   console.log('got a total of', allJobs.length, 'jobs');
   console.log('***************************************');
 
-  // filter algorithm
-  const jrJobs = allJobs.filter(job => {
-    const jobTitle = job.title.toLowerCase();
-
-    if (
-      jobTitle.includes('senior') ||
-      jobTitle.includes('manager') ||
-      jobTitle.includes('sr.') ||
-      jobTitle.includes('architect')
-    ) {
-      return false;
-    }
-    return true;
-  });
-
-  console.log('filtered down to', jrJobs.length);
-
-  // set in redis
-  const success = await setAsync('github', JSON.stringify(jrJobs));
+  const success = await setAsync('github', JSON.stringify(allJobs));
   console.log(success);
 }
 
