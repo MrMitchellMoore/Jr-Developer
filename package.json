@@ -1,0 +1,24 @@
+{
+  "name": "Jr-Developer",
+  "version": "1.0.0",
+  "description": "- create react app\r - setup material ui\r - import react router",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrMitchellMoore/Jr-Developer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrMitchellMoore/Jr-Developer/issues"
+  },
+  "homepage": "https://github.com/MrMitchellMoore/Jr-Developer#readme",
+  "dependencies": {
+    "cron": "^1.7.2",
+    "node-fetch": "^2.6.0"
+  }
+}
